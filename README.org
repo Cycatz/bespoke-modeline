@@ -2,6 +2,13 @@
 largely incorporated into [[https://github.com/Lambda-Emacs/lambda-line][Lambda-line]].
 
 
+The fork version has the following changes:
++ Add server name section in the modeline to show the current server name
++ Apply gruvbox-dark theme on active status colors
+ 
+#+ATTR_HTML: :width 85%
+[[file:screenshots/forked-modeline.png]]
+
 #+ATTR_HTML: :width 85%
 [[file:screenshots/dark-modeline.png]]
 #+ATTR_HTML: :width 85%
