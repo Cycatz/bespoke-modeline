@@ -399,6 +399,20 @@ want to use in the modeline *as substitute for* the original.")
 			             (format "-%s" (match-string 2 plus-minus)))
 		              (propertize "" 'face '(:weight bold))))))))
 
+;;;; Server display
+(defun bespoke-server-name ()
+  "return name of Emacs server"
+  (when (not (string= server-name "server"))
+    (let ((serv-name (file-name-nondirectory server-name)))
+      (concat
+        (propertize " •" 'face `(:inherit fringe))
+        (format " %s" serv-name))
+      )))
+
+
+(defun bespoke-modeline-server-name ()
+  (bespoke-server-name))
+
 ;;;; Dir display
 
 
@@ -516,10 +530,13 @@ modified (⨀)/(**), or read-write (◯)/(RW)"
   (let ((buffer-name (format-mode-line (if buffer-file-name (file-name-nondirectory (buffer-file-name)) "%b")))
         (mode-name   (bespoke-modeline-mode-name))
         (branch      (bespoke-modeline-vc-project-branch))
+        (server      (bespoke-modeline-server-name))
         (position    (format-mode-line "%l:%c ")))
     (bespoke-modeline-compose (bespoke-modeline-status)
                               (bespoke-modeline-truncate buffer-name bespoke-modeline-truncate-value)
                               (concat "(" mode-name
+                                      (when server
+                                        server)
                                       (when branch
                                         branch)
                                       ")")
