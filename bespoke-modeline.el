@@ -104,18 +104,24 @@ Modeline is composed as:
   "Modeline face for active secondary element"
   :group 'bespoke-modeline-active)
 
+;; #fabd2f for gruvbox-dark yellow
 (defface bespoke-modeline-active-status-RO
-  '((t (:inherit default :background "yellow" :box (:line-width 2 :color "yellow" :style nil))))
+  ;; '((t (:inherit default :background "yellow" :box (:line-width 2 :color "yellow" :style nil))))
+  '((t (:inherit default :background "#d79921" :box (:line-width 2 :color "#d79921" :style nil))))
   "Modeline face for active READ-ONLY element"
   :group 'bespoke-modeline-active)
 
+;; #b8bb26 for gruvbox-dark aqua
 (defface bespoke-modeline-active-status-RW
-  '((t (:inherit default :background "green" (:line-width 2 :color "green" :style nil))))
+  ;; '((t (:inherit default :background "green" (:line-width 2 :color "green" :style nil))))
+  '((t (:inherit default :background "#689d6a" (:line-width 2 :color "#689d6a" :style nil))))
   "Modeline face for active READ-WRITE element"
   :group 'bespoke-modeline-active)
 
+;; #fb4934 for gruvbox-dark red
 (defface bespoke-modeline-active-status-**
-  '((t (:inherit default :background "red" (:line-width 2 :color "red" :style nil))))
+  ;; '((t (:inherit default :background "red" (:line-width 2 :color "red" :style nil))))
+  '((t (:inherit default :background "#cc241d" (:line-width 2 :color "#cc241d" :style nil))))
   "Modeline face for active MODIFIED element"
   :group 'bespoke-modeline-active)
 
@@ -139,18 +145,23 @@ Modeline is composed as:
   "Modeline face for inactive primary element"
   :group 'bespoke-modeline-inactive)
 
+;; #fb4934 for gruvbox-dark gray
+;; #fbf1c7 for gruvbox-dark fg0
 (defface bespoke-modeline-inactive-status-RO
-  '((t (:foreground "light gray" :background "dark gray" (:line-width 2 :color "dark gray" :style nil))))
+  ;; '((t (:foreground "light gray" :background "dark gray" (:line-width 2 :color "dark gray" :style nil))))
+  '((t (:foreground "#fbf1c7" :background "#928374" (:line-width 2 :color "#928374" :style nil))))
   "Modeline face for inactive READ-ONLY element"
   :group 'bespoke-modeline-inactive)
 
 (defface bespoke-modeline-inactive-status-RW
-  '((t (:foreground "light gray" :background "dark gray" (:line-width 2 :color "dark gray" :style nil))))
+  ;; '((t (:foreground "light gray" :background "dark gray" (:line-width 2 :color "dark gray" :style nil))))
+  '((t (:foreground "#fbf1c7" :background "#928374" (:line-width 2 :color "#928374" :style nil))))
   "Modeline face for inactive READ-WRITE element"
   :group 'bespoke-modeline-inactive)
 
 (defface bespoke-modeline-inactive-status-**
-  '((t (:foreground "light gray" :background "dark gray" (:line-width 2 :color "dark gray" :style nil))))
+  ;; '((t (:foreground "light gray" :background "dark gray" (:line-width 2 :color "dark gray" :style nil))))
+  '((t (:foreground "#fbf1c7" :background "#928374" (:line-width 2 :color "#928374" :style nil))))
   "Modeline face for inactive MODIFIED element"
   :group 'bespoke-modeline-inactive)
 
