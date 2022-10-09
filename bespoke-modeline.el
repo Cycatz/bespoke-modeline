@@ -792,10 +792,13 @@ modified (⨀)/(**), or read-write (◯)/(RW)"
   (let ((buffer-name (format-mode-line "%b"))
         (mode-name   (bespoke-modeline-mode-name))
         (branch      (bespoke-modeline-vc-project-branch))
+        (server      (bespoke-modeline-server-name))
         (position    (format-mode-line "%l:%c")))
     (bespoke-modeline-compose (bespoke-modeline-status)
                               buffer-name
                               (concat "(" mode-name
+                                      (when server
+                                        server)
                                       (when branch
                                         branch)
                                       ")" )
